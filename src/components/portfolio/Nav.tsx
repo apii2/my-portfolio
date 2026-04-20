@@ -3,9 +3,9 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { href: "#skills", label: "Skills" },
   { href: "#work", label: "Work" },
   { href: "#experience", label: "Experience" },
+  { href: "#skills", label: "Skills" },
 ];
 
 export const Nav = () => {

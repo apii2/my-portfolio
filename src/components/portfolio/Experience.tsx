@@ -54,7 +54,7 @@ export const Experience = () => {
     <section id="experience" className="py-24 md:py-32 relative">
       <div className="container">
         <div className="flex items-center gap-4 mb-12">
-          <span className="font-mono text-sm text-primary">03.</span>
+          <span className="font-mono text-sm text-primary">02.</span>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
             Experience
           </h2>
