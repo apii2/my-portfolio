@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 
 type Project = {
   title: string;
+  date: string;
   description: string;
   tags: string[];
   live?: string;
@@ -12,46 +13,52 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Nimbus Analytics",
-    description: "Real-time dashboard for product teams. Built sub-100ms charts and an offline-first sync layer.",
-    tags: ["Next.js", "tRPC", "D3"],
-    live: "#",
-    code: "#",
+    title: "Todo List",
+    date: "Dec 2025",
+    description:
+      "Full-stack todo app with Next.js frontend and FastAPI backend. CRUD via RESTful endpoints, deployed on Vercel.",
+    tags: ["Next.js", "TypeScript", "FastAPI", "MySQL"],
+    code: "https://github.com/apii2",
     featured: true,
   },
   {
-    title: "Loop CMS",
-    description: "Headless content platform with a block-based editor and live collaborative editing.",
-    tags: ["React", "Yjs", "GraphQL"],
-    live: "#",
-    code: "#",
+    title: "URL Shortener",
+    date: "Nov 2025",
+    description:
+      "Python + Flask service that creates custom short URLs, with SQL-backed link storage and graceful invalid-link handling.",
+    tags: ["Python", "Flask", "SQL"],
+    code: "https://github.com/apii2",
   },
   {
-    title: "Pixel Forge",
-    description: "Browser-based icon designer with vector export and a plugin SDK.",
-    tags: ["TypeScript", "Canvas", "WASM"],
-    live: "#",
-    code: "#",
+    title: "Age Calculator",
+    date: "Jun 2025",
+    description:
+      "Vite + React + TypeScript app with Context API for state and robust form validation for accurate input handling.",
+    tags: ["Vite", "React", "TypeScript", "Tailwind"],
+    code: "https://github.com/apii2",
   },
   {
-    title: "Stride",
-    description: "Habit tracker focused on accessibility — full keyboard nav and screen reader optimized.",
-    tags: ["React", "Radix", "Supabase"],
-    live: "#",
-    code: "#",
+    title: "Product Cart",
+    date: "Apr 2025",
+    description:
+      "Functional product cart UI built with React hooks (useState, useEffect, useRef) and Context API for cross-component sync.",
+    tags: ["React.js", "Tailwind CSS", "Context API"],
+    code: "https://github.com/apii2",
   },
   {
-    title: "Echo Notes",
-    description: "Markdown notes with audio embedding and AI-generated summaries.",
-    tags: ["Vite", "OpenAI", "IndexedDB"],
-    live: "#",
-    code: "#",
+    title: "Onepasal eCommerce",
+    date: "2025 — Present",
+    description:
+      "Multi-role eCommerce platform (Customer, Vendor, Staff portals) with Redux state, React Query, and role-based access control.",
+    tags: ["Next.js", "Redux", "React Query", "Axios"],
+    featured: true,
   },
   {
-    title: "Lumen UI",
-    description: "Open-source component library — 60+ accessible primitives with theming via CSS variables.",
-    tags: ["React", "Storybook", "CSS"],
-    code: "#",
+    title: "Mobizilla Web Builds",
+    date: "2024 — 2025",
+    description:
+      "Independently built responsive marketing sites with React, Tailwind, SASS, Swiper.js sliders, and Animate.css transitions.",
+    tags: ["React.js", "Tailwind", "SASS", "Laravel"],
   },
 ];
 
@@ -60,8 +67,8 @@ const ProjectCard = ({ p }: { p: Project }) => (
     <div className="relative aspect-[16/10] overflow-hidden border-b border-border">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-card to-accent/15" />
       <div className="absolute inset-0 grid-pattern opacity-40" />
-      <div className="absolute inset-0 flex items-center justify-center">
-        <span className="font-mono text-2xl font-semibold text-foreground/80 group-hover:text-gradient transition-smooth">
+      <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
+        <span className="font-mono text-xl md:text-2xl font-semibold text-foreground/80 group-hover:text-gradient transition-smooth">
           {p.title}
         </span>
       </div>
@@ -70,6 +77,9 @@ const ProjectCard = ({ p }: { p: Project }) => (
           Featured
         </span>
       )}
+      <span className="absolute top-3 right-3 font-mono text-[10px] text-muted-foreground bg-background/80 backdrop-blur px-2 py-1 rounded border border-border">
+        {p.date}
+      </span>
     </div>
 
     <div className="flex-1 flex flex-col p-6">
@@ -79,6 +89,8 @@ const ProjectCard = ({ p }: { p: Project }) => (
           {p.code && (
             <a
               href={p.code}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={`${p.title} source code`}
               className="hover:text-primary transition-smooth"
             >
@@ -88,6 +100,8 @@ const ProjectCard = ({ p }: { p: Project }) => (
           {p.live && (
             <a
               href={p.live}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={`${p.title} live site`}
               className="hover:text-primary transition-smooth"
             >

@@ -1,9 +1,11 @@
 import { Badge } from "@/components/ui/badge";
 
 const stack = [
-  "React", "TypeScript", "Next.js", "Tailwind CSS",
-  "Vite", "Node.js", "GraphQL", "Framer Motion",
-  "Vitest", "Figma", "Storybook", "PostgreSQL",
+  "Next.js", "React.js", "TypeScript", "JavaScript",
+  "Tailwind CSS", "Shadcn/ui", "SASS", "Bootstrap",
+  "HTML5", "CSS3", "RESTful APIs", "React Query",
+  "Redux", "Context API", "Python", "FastAPI",
+  "MySQL", "Git/GitHub",
 ];
 
 export const About = () => {
@@ -19,21 +21,24 @@ export const About = () => {
         <div className="grid md:grid-cols-5 gap-12 items-start">
           <div className="md:col-span-3 space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
             <p>
-              I started writing CSS for fun back in 2016 and somehow never
-              stopped. Today I lead frontend on product teams shipping tools
-              used by thousands every day.
+              I'm a self-motivated frontend developer with more than two years
+              of experience building scalable, high-performance web applications
+              using Next.js and React.js.
             </p>
             <p>
-              I care most about <span className="text-foreground">performance</span>,{" "}
-              <span className="text-foreground">accessibility</span>, and the{" "}
-              <span className="text-foreground">small interactions</span> that
-              turn a good interface into a memorable one. Outside the editor
-              you'll find me brewing coffee, cycling, or sketching type.
+              I specialize in creating{" "}
+              <span className="text-foreground">responsive, user-focused</span>{" "}
+              interfaces with Tailwind CSS, HTML5, and modern JavaScript — with
+              strong attention to{" "}
+              <span className="text-foreground">performance</span>,{" "}
+              <span className="text-foreground">clean architecture</span>, and{" "}
+              <span className="text-foreground">maintainable code</span>. I also
+              work across the stack with Python and FastAPI when needed.
             </p>
 
             <div className="pt-4">
               <p className="font-mono text-xs text-muted-foreground mb-3">
-                # current stack
+                # tech I work with
               </p>
               <div className="flex flex-wrap gap-2">
                 {stack.map((t) => (
@@ -57,12 +62,12 @@ export const About = () => {
                 <div className="absolute inset-0 grid-pattern opacity-30" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="font-mono text-7xl md:text-8xl font-bold text-gradient select-none">
-                    AC
+                    AS
                   </span>
                 </div>
                 <div className="absolute bottom-4 left-4 right-4 font-mono text-xs text-muted-foreground flex justify-between">
-                  <span>portrait.jpg</span>
-                  <span className="text-primary">● live</span>
+                  <span>apeksha.jpg</span>
+                  <span className="text-primary">● online</span>
                 </div>
               </div>
             </div>
