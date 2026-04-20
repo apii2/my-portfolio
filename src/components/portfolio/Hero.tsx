@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Mail } from "lucide-react";
+import { ArrowDown, Download } from "lucide-react";
 import heroPortrait from "@/assets/hero-portrait.jpg";
 
 export const Hero = () => {
@@ -51,9 +51,9 @@ export const Hero = () => {
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <a href="mailto:apekshrestha22@gmail.com">
-                  <Mail className="mr-1" size={18} />
-                  Get in touch
+                <a href="/Apeksha_Shrestha_CV.pdf" download>
+                  <Download className="mr-1" size={18} />
+                  Download my CV
                 </a>
               </Button>
             </div>
