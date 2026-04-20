@@ -31,7 +31,7 @@ export const Nav = () => {
       <nav className="container flex items-center justify-between h-16">
         <a href="#top" className="font-mono text-sm font-semibold tracking-tight">
           <span className="text-primary">{"<"}</span>
-          alex.carter
+          apeksha.shrestha
           <span className="text-primary">{" />"}</span>
         </a>
 

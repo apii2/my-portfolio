@@ -9,39 +9,43 @@ type Role = {
 
 const roles: Role[] = [
   {
-    company: "Northwind Labs",
-    role: "Senior Frontend Engineer",
-    period: "2023 — Present",
-    location: "Berlin · Remote",
+    company: "Onepasal",
+    role: "Frontend Developer",
+    period: "Feb 2025 — Present",
+    location: "Kathmandu",
     highlights: [
-      "Lead the design system used across 4 products, cutting UI build time by ~40%.",
-      "Migrated legacy SPA to Next.js App Router; LCP dropped from 3.8s to 1.1s.",
-      "Mentor 3 engineers on accessibility, testing, and performance.",
+      "Developed a multi-role eCommerce platform (Customer, Vendor, and Staff portals) with Next.js and React.js.",
+      "Implemented scalable state management using Redux and Context API for efficient data flow across complex components.",
+      "Integrated RESTful APIs with Axios — handling auth, protected routes, and async data fetching; used React Query for server-state caching.",
+      "Improved performance via code splitting, lazy loading, and dynamic imports; built reusable, modular component architecture.",
+      "Implemented role-based access control and route protection for secure multi-user functionality.",
     ],
-    tech: ["Next.js", "TypeScript", "Radix", "Playwright"],
+    tech: ["Next.js", "React", "Redux", "React Query", "Axios", "Tailwind"],
   },
   {
-    company: "Pivotline",
-    role: "Frontend Engineer",
-    period: "2020 — 2023",
-    location: "Amsterdam",
+    company: "Mobizilla Digital Agency",
+    role: "Junior Frontend Developer",
+    period: "Aug 2024 — Feb 2025",
+    location: "Kathmandu",
     highlights: [
-      "Shipped the realtime collaboration editor used by 12k+ daily users.",
-      "Owned the analytics dashboard rewrite — 3x faster initial render.",
-      "Set up Storybook + visual regression testing across the org.",
+      "Independently handled all aspects of frontend development across client projects.",
+      "Built interactive UI features in React.js to enhance user experience and performance.",
+      "Styled responsive, modern interfaces with Tailwind CSS and SASS; integrated Swiper.js sliders and Animate.css transitions.",
+      "Gained hands-on experience with Laravel and PHP while integrating frontend components.",
     ],
-    tech: ["React", "GraphQL", "Storybook"],
+    tech: ["React.js", "Tailwind", "SASS", "Laravel", "PHP"],
   },
   {
-    company: "Studio Halftone",
-    role: "Web Developer",
-    period: "2018 — 2020",
-    location: "Lisbon",
+    company: "Nepit Solutions",
+    role: "JavaScript Developer",
+    period: "Mar 2024 — Aug 2024",
+    location: "Kathmandu",
     highlights: [
-      "Built 20+ custom marketing sites for design-led clients.",
-      "Implemented a CMS-driven component library on top of Sanity.",
+      "Developed interactive, dynamic web interfaces in JavaScript with responsive design and client-side functionality.",
+      "Collaborated with senior developers to implement features, optimize performance, and improve usability.",
+      "Customized themes and plugins with a focus on JavaScript-driven behavior to extend existing systems.",
     ],
-    tech: ["Vue", "Nuxt", "Sanity"],
+    tech: ["JavaScript", "HTML5", "CSS3"],
   },
 ];
 
@@ -102,15 +106,29 @@ export const Experience = () => {
             <span className="absolute -left-[7px] top-1.5 w-3.5 h-3.5 rounded-full bg-background border-2 border-muted-foreground" />
             <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-1">
               <h3 className="text-lg md:text-xl font-semibold tracking-tight">
-                B.Sc. Computer Science{" "}
-                <span className="text-muted-foreground">@ TU Lisbon</span>
+                BSc. CSIT{" "}
+                <span className="text-muted-foreground">@ St. Lawrence College</span>
               </h3>
               <span className="font-mono text-xs text-muted-foreground whitespace-nowrap">
-                2014 — 2018
+                2019 — 2024
+              </span>
+            </div>
+            <p className="text-sm text-muted-foreground mb-4">
+              Bachelors of Science in Computer Science and Information
+              Technology · Chuchepati, Kathmandu
+            </p>
+
+            <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-1">
+              <h3 className="text-base md:text-lg font-semibold tracking-tight">
+                Intermediate (Science){" "}
+                <span className="text-muted-foreground">@ Reliance International Academy</span>
+              </h3>
+              <span className="font-mono text-xs text-muted-foreground whitespace-nowrap">
+                2017 — 2019
               </span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Focus on human-computer interaction and distributed systems.
+              Saraswotinagar, Kathmandu
             </p>
           </li>
         </ol>

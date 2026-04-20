@@ -1,10 +1,10 @@
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 
 const socials = [
-  { href: "#", label: "GitHub", icon: Github },
-  { href: "#", label: "LinkedIn", icon: Linkedin },
-  { href: "#", label: "X / Twitter", icon: Twitter },
-  { href: "mailto:hello@alexcarter.dev", label: "Email", icon: Mail },
+  { href: "https://github.com/apii2", label: "GitHub", icon: Github },
+  { href: "https://www.linkedin.com/in/apeksha-shrestha/", label: "LinkedIn", icon: Linkedin },
+  { href: "mailto:apekshrestha22@gmail.com", label: "Email", icon: Mail },
+  { href: "tel:+9779849451044", label: "Phone", icon: Phone },
 ];
 
 export const Footer = () => {
@@ -14,11 +14,14 @@ export const Footer = () => {
         <div>
           <p className="font-mono text-sm">
             <span className="text-primary">{"<"}</span>
-            alex.carter
+            apeksha.shrestha
             <span className="text-primary">{" />"}</span>
           </p>
           <p className="text-xs text-muted-foreground mt-1">
-            © {new Date().getFullYear()} — Built with React & Tailwind.
+            © {new Date().getFullYear()} Apeksha Shrestha — Built with React & Tailwind.
+          </p>
+          <p className="text-xs text-muted-foreground mt-1">
+            Gopikrishna Nagar, Chabahil, Kathmandu
           </p>
         </div>
 
@@ -27,6 +30,8 @@ export const Footer = () => {
             <a
               key={label}
               href={href}
+              target={href.startsWith("http") ? "_blank" : undefined}
+              rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
               aria-label={label}
               className="w-10 h-10 flex items-center justify-center rounded-lg border border-border text-muted-foreground hover:text-primary hover:border-primary transition-smooth"
             >
