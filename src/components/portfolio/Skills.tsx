@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { useInView } from "@/hooks/use-in-view";
 import {
   Code2,
   Layers,
@@ -40,8 +41,13 @@ const skillGroups = [
 ];
 
 export const Skills = () => {
+  const { ref, inView } = useInView<HTMLElement>();
   return (
-    <section id="skills" className="py-24 md:py-32 relative">
+    <section
+      id="skills"
+      ref={ref}
+      className={`py-24 md:py-32 relative reveal ${inView ? "reveal-in" : ""}`}
+    >
       <div className="container">
         <div className="flex items-center gap-4 mb-12">
           <span className="font-mono text-sm text-primary">03.</span>
