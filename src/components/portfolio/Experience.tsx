@@ -1,3 +1,5 @@
+import { useInView } from "@/hooks/use-in-view";
+
 type Role = {
   company: string;
   role: string;
