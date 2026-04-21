@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { useInView } from "@/hooks/use-in-view";
 import {
   Code2,
   Layers,

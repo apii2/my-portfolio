@@ -1,4 +1,5 @@
 import { ArrowUpRight, Github } from "lucide-react";
+import { useInView } from "@/hooks/use-in-view";
 import { Badge } from "@/components/ui/badge";
 
 type Project = {
