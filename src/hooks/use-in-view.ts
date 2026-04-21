@@ -10,10 +10,7 @@ export const useInView = <T extends HTMLElement = HTMLElement>(
     const el = ref.current;
     if (!el) return;
     const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setInView(true);
-        observer.unobserve(entry.target);
-      }
+      setInView(entry.isIntersecting);
     }, options);
     observer.observe(el);
     return () => observer.disconnect();
