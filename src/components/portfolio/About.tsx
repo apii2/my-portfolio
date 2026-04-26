@@ -40,7 +40,7 @@ export const About = () => {
         <div className="mx-auto w-16 h-px bg-primary mb-16" />
 
         <div className="grid md:grid-cols-12 gap-10 md:gap-14 items-center">
-          <div className="md:col-span-7 space-y-5 text-muted-foreground leading-relaxed text-base md:text-[17px] font-light">
+          <div className="md:col-span-7 space-y-5 text-foreground/90 leading-relaxed text-base md:text-[17px] font-light">
             <p>
               I'm{" "}
               <span className="text-foreground">Apeksha Shrestha</span>, a
@@ -73,7 +73,7 @@ export const About = () => {
                   className="group relative rounded-md border border-primary/40 bg-card/40 px-3 py-4 flex flex-col items-center justify-center gap-2 transition-smooth hover:border-primary hover:shadow-glow"
                 >
                   <Icon size={32} style={{ color }} />
-                  <span className="text-[10px] tracking-[0.18em] uppercase font-light text-muted-foreground">
+                  <span className="text-[10px] tracking-[0.18em] uppercase font-light text-foreground/80">
                     {label}
                   </span>
                 </div>
