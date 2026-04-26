@@ -5,7 +5,7 @@ type Role = {
   role: string;
   period: string;
   location: string;
-  highlights: string[];
+  description: string;
   tech: string[];
 };
 
@@ -15,13 +15,8 @@ const roles: Role[] = [
     role: "Frontend Developer",
     period: "Feb 2025 — Present",
     location: "Kathmandu",
-    highlights: [
-      "Developed a multi-role eCommerce platform (Customer, Vendor, and Staff portals) with Next.js and React.js.",
-      "Implemented scalable state management using Redux and Context API for efficient data flow across complex components.",
-      "Integrated RESTful APIs with Axios — handling auth, protected routes, and async data fetching; used React Query for server-state caching.",
-      "Improved performance via code splitting, lazy loading, and dynamic imports; built reusable, modular component architecture.",
-      "Implemented role-based access control and route protection for secure multi-user functionality.",
-    ],
+    description:
+      "Building a multi-role eCommerce platform with Next.js and React, handling scalable state management, API integration, and performance optimization across customer, vendor, and staff portals.",
     tech: ["Next.js", "React", "Redux", "React Query", "Axios", "Tailwind"],
   },
   {
@@ -29,12 +24,8 @@ const roles: Role[] = [
     role: "Junior Frontend Developer",
     period: "Aug 2024 — Feb 2025",
     location: "Kathmandu",
-    highlights: [
-      "Independently handled all aspects of frontend development across client projects.",
-      "Built interactive UI features in React.js to enhance user experience and performance.",
-      "Styled responsive, modern interfaces with Tailwind CSS and SASS; integrated Swiper.js sliders and Animate.css transitions.",
-      "Gained hands-on experience with Laravel and PHP while integrating frontend components.",
-    ],
+    description:
+      "Independently handled frontend development across client projects, building responsive React interfaces with Tailwind and SASS while integrating with Laravel and PHP backends.",
     tech: ["React.js", "Tailwind", "SASS", "Laravel", "PHP"],
   },
   {
@@ -42,11 +33,8 @@ const roles: Role[] = [
     role: "JavaScript Developer",
     period: "Mar 2024 — Aug 2024",
     location: "Kathmandu",
-    highlights: [
-      "Developed interactive, dynamic web interfaces in JavaScript with responsive design and client-side functionality.",
-      "Collaborated with senior developers to implement features, optimize performance, and improve usability.",
-      "Customized themes and plugins with a focus on JavaScript-driven behavior to extend existing systems.",
-    ],
+    description:
+      "Developed interactive, dynamic web interfaces in JavaScript with responsive design, collaborating with senior developers to ship features and customize themes and plugins.",
     tech: ["JavaScript", "HTML5", "CSS3"],
   },
 ];
@@ -84,14 +72,9 @@ export const Experience = () => {
                 {r.location}
               </p>
 
-              <ul className="space-y-2 text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
-                {r.highlights.map((h) => (
-                  <li key={h} className="flex gap-3">
-                    <span className="text-primary mt-1.5 shrink-0">▹</span>
-                    <span>{h}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-sm md:text-base text-foreground/80 leading-relaxed mb-4">
+                {r.description}
+              </p>
 
               <div className="flex flex-wrap gap-x-3 gap-y-1">
                 {r.tech.map((t) => (
