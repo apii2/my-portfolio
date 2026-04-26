@@ -9,23 +9,26 @@ const socials = [
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-border py-12 mt-12">
-      <div className="container flex flex-col md:flex-row gap-6 items-center justify-between">
-        <div>
-          <p className="font-mono text-sm">
-            <span className="text-primary">{"<"}</span>
-            apeksha.shrestha
-            <span className="text-primary">{" />"}</span>
-          </p>
-          <p className="text-xs text-muted-foreground mt-1">
-            © {new Date().getFullYear()} Apeksha Shrestha — Built with React & Tailwind.
-          </p>
-          <p className="text-xs text-muted-foreground mt-1">
-            Gopikrishna Nagar, Chabahil, Kathmandu
-          </p>
-        </div>
+    <footer id="contact" className="border-t border-border py-20">
+      <div className="container max-w-3xl text-center">
+        <h2 className="text-3xl md:text-4xl font-light tracking-wide uppercase mb-3">
+          Contact
+        </h2>
+        <div className="mx-auto w-16 h-px bg-primary mb-10" />
 
-        <div className="flex items-center gap-2">
+        <p className="text-muted-foreground leading-relaxed mb-10">
+          Have a question or want to work together? Reach out via email, phone,
+          or any of the links below — I'll get back to you as soon as possible.
+        </p>
+
+        <a
+          href="mailto:apekshrestha22@gmail.com"
+          className="inline-block text-lg md:text-xl font-light tracking-wide text-primary hover:text-primary-glow transition-smooth mb-12"
+        >
+          apekshrestha22@gmail.com
+        </a>
+
+        <div className="flex items-center justify-center gap-3 mb-12">
           {socials.map(({ href, label, icon: Icon }) => (
             <a
               key={label}
@@ -33,12 +36,16 @@ export const Footer = () => {
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
               aria-label={label}
-              className="w-10 h-10 flex items-center justify-center rounded-lg border border-border text-muted-foreground hover:text-primary hover:border-primary transition-smooth"
+              className="w-11 h-11 flex items-center justify-center border border-border text-muted-foreground hover:text-primary hover:border-primary transition-smooth"
             >
-              <Icon size={18} />
+              <Icon size={18} strokeWidth={1.5} />
             </a>
           ))}
         </div>
+
+        <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-light">
+          © {new Date().getFullYear()} Apeksha Shrestha · Kathmandu
+        </p>
       </div>
     </footer>
   );
