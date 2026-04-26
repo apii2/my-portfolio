@@ -1,28 +1,28 @@
 import { useInView } from "@/hooks/use-in-view";
 import {
-  Atom,
-  Braces,
-  Code2,
-  Database,
-  FileType,
-  GitBranch,
-  Layers,
-  Server,
-  Sparkles,
-  Wind,
-} from "lucide-react";
+  SiTypescript,
+  SiJavascript,
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiShadcnui,
+  SiFastapi,
+  SiMysql,
+  SiPython,
+  SiGit,
+} from "react-icons/si";
 
 const aboutSkills = [
-  { icon: FileType, label: "TypeScript" },
-  { icon: Braces, label: "JavaScript" },
-  { icon: Atom, label: "React" },
-  { icon: Layers, label: "Next.js" },
-  { icon: Wind, label: "Tailwind" },
-  { icon: Sparkles, label: "Shadcn/ui" },
-  { icon: Server, label: "FastAPI" },
-  { icon: Database, label: "MySQL" },
-  { icon: Code2, label: "Python" },
-  { icon: GitBranch, label: "Git" },
+  { icon: SiTypescript, label: "TypeScript", color: "#3178C6" },
+  { icon: SiJavascript, label: "JavaScript", color: "#F7DF1E" },
+  { icon: SiReact, label: "React", color: "#61DAFB" },
+  { icon: SiNextdotjs, label: "Next.js", color: "#FFFFFF" },
+  { icon: SiTailwindcss, label: "Tailwind", color: "#38BDF8" },
+  { icon: SiShadcnui, label: "Shadcn", color: "#FFFFFF" },
+  { icon: SiFastapi, label: "FastAPI", color: "#009688" },
+  { icon: SiMysql, label: "MySQL", color: "#4479A1" },
+  { icon: SiPython, label: "Python", color: "#3776AB" },
+  { icon: SiGit, label: "Git", color: "#F05032" },
 ];
 
 export const About = () => {
@@ -66,18 +66,16 @@ export const About = () => {
           </div>
 
           <div className="md:col-span-5">
-            <div className="grid grid-cols-5 gap-x-4 gap-y-8 max-w-sm mx-auto">
-              {aboutSkills.map(({ icon: Icon, label }) => (
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-sm mx-auto">
+              {aboutSkills.map(({ icon: Icon, label, color }) => (
                 <div
                   key={label}
-                  className="group flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-smooth"
-                  title={label}
+                  className="group relative rounded-md border border-primary/40 bg-card/40 px-3 py-4 flex flex-col items-center justify-center gap-2 transition-smooth hover:border-primary hover:shadow-glow"
                 >
-                  <Icon
-                    size={32}
-                    strokeWidth={1.25}
-                    className="transition-transform group-hover:-translate-y-1"
-                  />
+                  <Icon size={32} style={{ color }} />
+                  <span className="text-[10px] tracking-[0.18em] uppercase font-light text-muted-foreground">
+                    {label}
+                  </span>
                 </div>
               ))}
             </div>
