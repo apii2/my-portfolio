@@ -66,7 +66,7 @@ export const About = () => {
           </div>
 
           <div className="md:col-span-5">
-            <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-sm mx-auto">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 max-w-md mx-auto">
               {aboutSkills.map(({ icon: Icon, label, color }) => (
                 <div
                   key={label}
