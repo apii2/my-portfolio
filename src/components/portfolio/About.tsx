@@ -1,5 +1,29 @@
 import { useInView } from "@/hooks/use-in-view";
-import heroPortrait from "@/assets/hero-portrait.jpg";
+import {
+  Atom,
+  Braces,
+  Code2,
+  Database,
+  FileType,
+  GitBranch,
+  Layers,
+  Server,
+  Sparkles,
+  Wind,
+} from "lucide-react";
+
+const aboutSkills = [
+  { icon: FileType, label: "TypeScript" },
+  { icon: Braces, label: "JavaScript" },
+  { icon: Atom, label: "React" },
+  { icon: Layers, label: "Next.js" },
+  { icon: Wind, label: "Tailwind" },
+  { icon: Sparkles, label: "Shadcn/ui" },
+  { icon: Server, label: "FastAPI" },
+  { icon: Database, label: "MySQL" },
+  { icon: Code2, label: "Python" },
+  { icon: GitBranch, label: "Git" },
+];
 
 export const About = () => {
   const { ref, inView } = useInView<HTMLElement>();
@@ -16,21 +40,6 @@ export const About = () => {
         <div className="mx-auto w-16 h-px bg-primary mb-16" />
 
         <div className="grid md:grid-cols-12 gap-10 md:gap-14 items-center">
-          <div className="md:col-span-5">
-            <div className="relative max-w-xs mx-auto md:max-w-none">
-              <div className="absolute -inset-2 bg-primary/20 blur-2xl opacity-60" />
-              <div className="relative aspect-[4/5] overflow-hidden border border-border bg-card">
-                <img
-                  src={heroPortrait}
-                  alt="Apeksha Shrestha — Frontend Developer"
-                  width={1024}
-                  height={1280}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-
           <div className="md:col-span-7 space-y-5 text-muted-foreground leading-relaxed text-base md:text-[17px] font-light">
             <p>
               I'm{" "}
@@ -54,6 +63,24 @@ export const About = () => {
               computer, I enjoy reading, sketching UIs, and exploring new
               cafés around the valley.
             </p>
+          </div>
+
+          <div className="md:col-span-5">
+            <div className="grid grid-cols-5 gap-x-4 gap-y-8 max-w-sm mx-auto">
+              {aboutSkills.map(({ icon: Icon, label }) => (
+                <div
+                  key={label}
+                  className="group flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-smooth"
+                  title={label}
+                >
+                  <Icon
+                    size={32}
+                    strokeWidth={1.25}
+                    className="transition-transform group-hover:-translate-y-1"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
