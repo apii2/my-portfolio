@@ -72,20 +72,9 @@ export const Experience = () => {
                 {r.location}
               </p>
 
-              <p className="text-sm md:text-base text-foreground/80 leading-relaxed mb-4">
+              <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
                 {r.description}
               </p>
-
-              <div className="flex flex-wrap gap-x-3 gap-y-1">
-                {r.tech.map((t) => (
-                  <span
-                    key={t}
-                    className="font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
             </li>
           ))}
 
