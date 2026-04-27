@@ -77,7 +77,7 @@ export const About = () => {
                   className="group relative rounded-md border border-primary/40 bg-card/40 px-3 py-4 flex flex-col items-center justify-center gap-2 transition-smooth hover:border-primary hover:shadow-glow"
                 >
                   <Icon size={32} style={{ color }} />
-                  <span className="text-[10px] tracking-[0.18em] uppercase font-light text-foreground/80">
+                  <span className="text-[10px] tracking-[0.18em] uppercase font-light text-foreground/80 text-center">
                     {label}
                   </span>
                 </div>
