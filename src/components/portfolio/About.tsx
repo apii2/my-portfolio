@@ -10,6 +10,8 @@ import {
   SiMysql,
   SiPython,
   SiGit,
+  SiRedux,
+  SiReactquery,
 } from "react-icons/si";
 
 const aboutSkills = [
@@ -17,6 +19,8 @@ const aboutSkills = [
   { icon: SiJavascript, label: "JavaScript", color: "#F7DF1E" },
   { icon: SiReact, label: "React", color: "#61DAFB" },
   { icon: SiNextdotjs, label: "Next.js", color: "#FFFFFF" },
+  { icon: SiRedux, label: "Redux", color: "#764ABC" },
+  { icon: SiReactquery, label: "React Query", color: "#FF4154" },
   { icon: SiTailwindcss, label: "Tailwind", color: "#38BDF8" },
   { icon: SiShadcnui, label: "Shadcn", color: "#FFFFFF" },
   { icon: SiFastapi, label: "FastAPI", color: "#009688" },
