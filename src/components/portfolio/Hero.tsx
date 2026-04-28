@@ -87,13 +87,12 @@ export const Hero = () => {
         >
           <a
             href="#work"
-            className="group relative overflow-hidden inline-flex items-center gap-3 border border-primary text-primary px-8 py-3 text-sm tracking-wide uppercase font-light transition-all duration-300 hover:-translate-y-1 hover:scale-[1.06] hover:bg-primary hover:text-primary-foreground hover:shadow-[0_10px_30px_-10px_hsl(var(--primary))] hover:border-primary"
+            className="group inline-flex items-center gap-3 border border-primary text-primary px-8 py-3 text-sm tracking-wide uppercase font-light hover:bg-primary hover:text-primary-foreground transition-smooth"
           >
-            <span className="pointer-events-none absolute -inset-x-10 -top-10 h-20 rotate-12 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-40 transition-all duration-700" />
             View my work
             <ArrowRight
               size={16}
-              className="relative transition-transform group-hover:translate-x-1 group-hover:[filter:drop-shadow(0_0_6px_hsl(var(--primary)))]"
+              className="transition-transform group-hover:translate-x-1"
             />
           </a>
         </div>
