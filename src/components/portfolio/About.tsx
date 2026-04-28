@@ -70,14 +70,31 @@ export const About = () => {
           </div>
 
           <div className="md:col-span-5">
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 max-w-md mx-auto">
-              {aboutSkills.map(({ icon: Icon, label, color }) => (
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 max-w-md mx-auto [perspective:1000px]">
+              {aboutSkills.map(({ icon: Icon, label, color }, i) => (
                 <div
                   key={label}
-                  className="group relative rounded-md border border-primary/40 bg-card/40 px-3 py-4 flex flex-col items-center justify-center gap-2 transition-smooth hover:border-primary hover:shadow-glow"
+                  style={{
+                    animationDelay: `${i * 80}ms`,
+                    ["--skill-color" as string]: color,
+                  }}
+                  className="skill-tile group relative overflow-hidden rounded-lg border border-primary/30 bg-card/40 px-3 py-4 flex flex-col items-center justify-center gap-2 cursor-pointer transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.06] hover:rotate-[-1.5deg] hover:border-[color:var(--skill-color)] hover:shadow-[0_10px_30px_-10px_var(--skill-color)] animate-fade-in"
                 >
-                  <Icon size={32} style={{ color }} />
-                  <span className="text-[10px] tracking-[0.18em] uppercase font-light text-foreground/80 text-center">
+                  <span
+                    className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{
+                      background: `radial-gradient(circle at 50% 0%, ${color}33, transparent 70%)`,
+                    }}
+                  />
+                  <span
+                    className="pointer-events-none absolute -inset-x-10 -top-10 h-20 rotate-12 bg-gradient-to-r from-transparent via-white/15 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-32 transition-all duration-700 ease-out"
+                  />
+                  <Icon
+                    size={32}
+                    style={{ color }}
+                    className="relative z-10 transition-transform duration-500 ease-out group-hover:scale-125 group-hover:-translate-y-0.5 group-hover:[filter:drop-shadow(0_0_8px_var(--skill-color))]"
+                  />
+                  <span className="relative z-10 text-[10px] tracking-[0.18em] uppercase font-light text-foreground/80 text-center transition-colors duration-300 group-hover:text-[color:var(--skill-color)]">
                     {label}
                   </span>
                 </div>
