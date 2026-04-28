@@ -87,7 +87,7 @@ export const Hero = () => {
         >
           <a
             href="#work"
-            className="group relative inline-flex items-center gap-3 border border-primary text-primary px-8 py-3 text-sm tracking-wide uppercase font-light hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-105 duration-300"
+            className="group relative inline-flex items-center gap-3 border border-primary text-primary px-6 py-5 text-sm tracking-wide uppercase font-light hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-105 duration-300"
           >
             <span
               aria-hidden="true"
