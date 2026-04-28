@@ -74,7 +74,18 @@ export const About = () => {
               {aboutSkills.map(({ icon: Icon, label, color }) => (
                 <div
                   key={label}
-                  className="group relative rounded-md border border-primary/40 bg-card/40 px-3 py-4 flex flex-col items-center justify-center gap-2 transition-smooth hover:border-primary hover:shadow-glow"
+                  className="group relative rounded-md border bg-card/40 px-3 py-4 flex flex-col items-center justify-center gap-2 transition-smooth hover:shadow-glow"
+                  style={{
+                    borderColor: `${color}66`,
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = color;
+                    e.currentTarget.style.boxShadow = `0 0 20px ${color}55`;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = `${color}66`;
+                    e.currentTarget.style.boxShadow = "";
+                  }}
                 >
                   <Icon size={32} style={{ color }} />
                   <span className="text-[10px] tracking-[0.18em] uppercase font-light text-foreground/80 text-center">
