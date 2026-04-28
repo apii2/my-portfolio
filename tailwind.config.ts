@@ -94,8 +94,8 @@ export default {
           "50%": { opacity: "0" },
         },
         "echo": {
-          "0%": { transform: "scale(1)", opacity: "0.7" },
-          "100%": { transform: "scale(1.6)", opacity: "0" },
+          "0%": { inset: "0px", opacity: "0.7" },
+          "100%": { inset: "-20px", opacity: "0" },
         },
       },
       animation: {
