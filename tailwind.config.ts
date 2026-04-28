@@ -93,6 +93,10 @@ export default {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0" },
         },
+        "echo": {
+          "0%": { transform: "scale(1)", opacity: "0.7" },
+          "100%": { transform: "scale(1.6)", opacity: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -101,6 +105,7 @@ export default {
         "fade-in": "fade-in 0.5s ease-out both",
         "glow-pulse": "glow-pulse 4s ease-in-out infinite",
         "blink": "blink 1s step-end infinite",
+        "echo": "echo 2.4s ease-out infinite",
       },
     },
   },
