@@ -91,11 +91,11 @@ export const Hero = () => {
           >
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 border border-primary opacity-0 group-hover:opacity-100 group-hover:animate-echo"
+              className="pointer-events-none absolute inset-0 border-2 border-primary opacity-0 group-hover:opacity-100 group-hover:animate-echo"
             />
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 border border-primary opacity-0 group-hover:opacity-100 group-hover:animate-echo"
+              className="pointer-events-none absolute inset-0 border-2 border-primary opacity-0 group-hover:opacity-100 group-hover:animate-echo"
               style={{ animationDelay: "1.2s" }}
             />
             View my work
