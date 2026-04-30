@@ -127,9 +127,12 @@ const ProjectRow = ({ p, index }: { p: Project; index: number }) => {
               href={p.live}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-primary hover:text-primary-glow transition-smooth"
+              className="group/btn relative inline-flex items-center gap-2 px-4 py-2 text-xs uppercase tracking-[0.18em] text-primary border-b border-primary overflow-hidden transition-colors duration-500 hover:text-primary-foreground"
             >
-              Live app <ArrowUpRight size={14} />
+              <span className="absolute inset-0 bg-primary translate-y-full group-hover/btn:translate-y-0 transition-transform duration-500 ease-out -z-0" />
+              <span className="relative z-10 inline-flex items-center gap-2">
+                Live app <ArrowUpRight size={14} />
+              </span>
             </a>
           )}
           {p.code && (
@@ -137,9 +140,12 @@ const ProjectRow = ({ p, index }: { p: Project; index: number }) => {
               href={p.code}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-muted-foreground hover:text-primary transition-smooth"
+              className="group/btn relative inline-flex items-center gap-2 px-4 py-2 text-xs uppercase tracking-[0.18em] text-muted-foreground border-b border-muted-foreground/60 overflow-hidden transition-colors duration-500 hover:text-primary-foreground hover:border-primary"
             >
-              <Github size={14} /> Source
+              <span className="absolute inset-0 bg-primary translate-y-full group-hover/btn:translate-y-0 transition-transform duration-500 ease-out -z-0" />
+              <span className="relative z-10 inline-flex items-center gap-2">
+                <Github size={14} /> Source
+              </span>
             </a>
           )}
         </div>
