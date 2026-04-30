@@ -8,18 +8,18 @@ import { Starfield } from "@/components/portfolio/Starfield";
 
 const Index = () => {
   return (
-    <div className="relative min-h-screen text-foreground">
+    <div className="relative min-h-screen bg-background text-foreground">
       {/* Global animated background — shared across every section */}
       <div
         aria-hidden="true"
-        className="fixed inset-0 -z-10 pointer-events-none"
+        className="fixed inset-0 z-0 pointer-events-none"
       >
         <Starfield />
         <div className="absolute inset-0 bg-hero-glow" />
       </div>
 
       <Nav />
-      <main className="relative">
+      <main className="relative z-10">
         <Hero />
         <About />
         <Projects />
