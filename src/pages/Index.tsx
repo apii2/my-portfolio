@@ -4,12 +4,19 @@ import { About } from "@/components/portfolio/About";
 import { Projects } from "@/components/portfolio/Projects";
 import { Experience } from "@/components/portfolio/Experience";
 import { Footer } from "@/components/portfolio/Footer";
+import { Starfield } from "@/components/portfolio/Starfield";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="relative min-h-screen bg-background text-foreground">
+      {/* Global animated background spanning the whole page */}
+      <div className="fixed inset-0 -z-10 pointer-events-none">
+        <Starfield />
+        <div className="absolute inset-0 bg-hero-glow" />
+      </div>
+
       <Nav />
-      <main>
+      <main className="relative">
         <Hero />
         <About />
         <Projects />
