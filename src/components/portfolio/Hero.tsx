@@ -9,15 +9,11 @@ export const Hero = () => {
   const current = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
-    const section = sectionRef.current;
-    if (!section) return;
-
     let raf = 0;
 
     const handleMove = (e: MouseEvent) => {
-      const rect = section.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width - 0.5;
-      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      const x = e.clientX / window.innerWidth - 0.5;
+      const y = e.clientY / window.innerHeight - 0.5;
       target.current = { x, y };
     };
 
@@ -33,22 +29,22 @@ export const Hero = () => {
       const { x, y } = current.current;
 
       if (headingRef.current) {
-        headingRef.current.style.transform = `translate3d(${x * -20}px, ${y * -20}px, 0)`;
+        headingRef.current.style.transform = `translate3d(${x * -30}px, ${y * -30}px, 0)`;
       }
       if (ctaRef.current) {
-        ctaRef.current.style.transform = `translate3d(${x * -35}px, ${y * -35}px, 0)`;
+        ctaRef.current.style.transform = `translate3d(${x * -55}px, ${y * -55}px, 0)`;
       }
 
       raf = requestAnimationFrame(tick);
     };
 
-    section.addEventListener("mousemove", handleMove);
-    section.addEventListener("mouseleave", handleLeave);
+    window.addEventListener("mousemove", handleMove);
+    window.addEventListener("mouseleave", handleLeave);
     raf = requestAnimationFrame(tick);
 
     return () => {
-      section.removeEventListener("mousemove", handleMove);
-      section.removeEventListener("mouseleave", handleLeave);
+      window.removeEventListener("mousemove", handleMove);
+      window.removeEventListener("mouseleave", handleLeave);
       cancelAnimationFrame(raf);
     };
   }, []);
