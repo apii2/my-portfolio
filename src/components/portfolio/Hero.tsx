@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
+import { Starfield } from "./Starfield";
 
 export const Hero = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -63,9 +64,10 @@ export const Hero = () => {
       id="top"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
+      <Starfield />
       <div
         ref={glowRef}
-        className="absolute inset-0 bg-hero-glow pointer-events-none will-change-transform opacity-60"
+        className="absolute inset-0 bg-hero-glow pointer-events-none will-change-transform"
       />
 
       <div className="container relative text-center">
