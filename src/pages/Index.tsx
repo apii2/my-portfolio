@@ -8,7 +8,7 @@ import { Starfield } from "@/components/portfolio/Starfield";
 
 const Index = () => {
   return (
-    <div className="relative min-h-screen bg-background text-foreground">
+    <div className="relative min-h-screen text-foreground">
       {/* Global animated background — shared across every section */}
       <div
         aria-hidden="true"
