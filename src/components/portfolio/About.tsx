@@ -63,9 +63,7 @@ export const About = () => {
             <p>
               I focus on clean architecture, maintainable code, and pixel-level
               attention to detail, working across the stack with FastAPI, REST
-              APIs and MySQL when projects call for it. When I'm not at my
-              computer, I enjoy reading, sketching UIs, and exploring new
-              cafés around the valley.
+              APIs and MySQL when projects call for it.
             </p>
           </div>
 
