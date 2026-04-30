@@ -1,12 +1,10 @@
 import { ArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
-import { Starfield } from "./Starfield";
 
 export const Hero = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
   const headingRef = useRef<HTMLHeadingElement | null>(null);
   const ctaRef = useRef<HTMLDivElement | null>(null);
-  const glowRef = useRef<HTMLDivElement | null>(null);
   const target = useRef({ x: 0, y: 0 });
   const current = useRef({ x: 0, y: 0 });
 
@@ -40,9 +38,6 @@ export const Hero = () => {
       if (ctaRef.current) {
         ctaRef.current.style.transform = `translate3d(${x * -35}px, ${y * -35}px, 0)`;
       }
-      if (glowRef.current) {
-        glowRef.current.style.transform = `translate3d(${x * 40}px, ${y * 40}px, 0)`;
-      }
 
       raf = requestAnimationFrame(tick);
     };
@@ -64,12 +59,6 @@ export const Hero = () => {
       id="top"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      <Starfield />
-      <div
-        ref={glowRef}
-        className="absolute inset-0 bg-hero-glow pointer-events-none will-change-transform"
-      />
-
       <div className="container relative text-center">
         <h1
           ref={headingRef}
