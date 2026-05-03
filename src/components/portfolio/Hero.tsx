@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { ParticlesBackground } from "./ParticlesBackground";
 
 export const Hero = () => {
   return (
@@ -7,7 +8,12 @@ export const Hero = () => {
       id="top"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      <div className="container relative text-center">
+      <div aria-hidden="true" className="absolute inset-0 z-0">
+        <ParticlesBackground />
+        <div className="absolute inset-0 bg-hero-glow pointer-events-none" />
+      </div>
+
+      <div className="container relative z-10 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
