@@ -1,13 +1,59 @@
 import { ArrowRight } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import type { ISourceOptions } from "@tsparticles/engine";
 
 export const Hero = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
   const headingRef = useRef<HTMLHeadingElement | null>(null);
   const ctaRef = useRef<HTMLDivElement | null>(null);
-  const glowRef = useRef<HTMLDivElement | null>(null);
   const target = useRef({ x: 0, y: 0 });
   const current = useRef({ x: 0, y: 0 });
+  const [engineReady, setEngineReady] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => setEngineReady(true));
+  }, []);
+
+  const particleOptions: ISourceOptions = useMemo(
+    () => ({
+      fullScreen: { enable: false },
+      background: { color: { value: "transparent" } },
+      fpsLimit: 60,
+      detectRetina: true,
+      interactivity: {
+        events: {
+          onHover: { enable: true, mode: "repulse", parallax: { enable: true, force: 60, smooth: 12 } },
+          resize: { enable: true },
+        },
+        modes: {
+          repulse: { distance: 120, duration: 0.4 },
+        },
+      },
+      particles: {
+        number: { value: 80, density: { enable: true, width: 1920, height: 1080 } },
+        color: { value: "hsl(var(--primary))" },
+        opacity: { value: { min: 0.2, max: 0.7 } },
+        size: { value: { min: 1, max: 3 } },
+        links: {
+          enable: true,
+          distance: 140,
+          color: "hsl(var(--primary))",
+          opacity: 0.25,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 0.6,
+          outModes: { default: "out" },
+        },
+      },
+    }),
+    []
+  );
 
   useEffect(() => {
     let raf = 0;
@@ -35,9 +81,6 @@ export const Hero = () => {
       if (ctaRef.current) {
         ctaRef.current.style.transform = `translate3d(${x * -55}px, ${y * -55}px, 0)`;
       }
-      if (glowRef.current) {
-        glowRef.current.style.transform = `translate3d(${x * 40}px, ${y * 40}px, 0)`;
-      }
 
       raf = requestAnimationFrame(tick);
     };
@@ -59,12 +102,14 @@ export const Hero = () => {
       id="top"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Local parallax glow layer that follows the mouse */}
-      <div
-        ref={glowRef}
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-hero-glow will-change-transform"
-      />
+      {/* Particles parallax layer */}
+      {engineReady && (
+        <Particles
+          id="hero-particles"
+          className="absolute inset-0"
+          options={particleOptions}
+        />
+      )}
 
       <div className="container relative text-center">
         <h1
