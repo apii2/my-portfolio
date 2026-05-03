@@ -24,13 +24,19 @@ export const ParticlesBackground = () => {
       detectRetina: true,
       interactivity: {
         events: {
-          onHover: { enable: true, mode: "grab" },
+          onHover: { enable: true, mode: ["grab", "bubble"] },
           resize: { enable: true },
         },
         modes: {
           grab: {
-            distance: 160,
-            links: { opacity: 0.6 },
+            distance: 180,
+            links: { opacity: 0.8 },
+          },
+          bubble: {
+            distance: 180,
+            size: 3,
+            duration: 2,
+            opacity: 0.9,
           },
         },
       },
@@ -38,13 +44,13 @@ export const ParticlesBackground = () => {
         number: { value: 80, density: { enable: true, width: 1200, height: 800 } },
         color: { value: "#ffffff" },
         shape: { type: "circle" },
-        opacity: { value: 0.5 },
+        opacity: { value: 0.15 },
         size: { value: { min: 1.5, max: 3 } },
         links: {
           enable: true,
           distance: 150,
           color: "#ffffff",
-          opacity: 0.4,
+          opacity: 0.1,
           width: 1,
         },
         move: {
