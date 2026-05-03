@@ -77,8 +77,8 @@ const ProjectRow = ({ p, index }: { p: Project; index: number }) => {
   return (
     <article className="grid md:grid-cols-12 gap-8 md:gap-12 items-center">
       {/* Visual */}
-      <div className={`md:col-span-7 ${reverse ? "md:order-2" : "md:order-1"}`}>
-        <div className="group relative aspect-[18/14] overflow-hidden border border-border bg-card">
+      <div className={`md:col-span-8 ${reverse ? "md:order-2" : "md:order-1"}`}>
+        <div className="group relative aspect-[11/7] overflow-hidden border border-border bg-card">
           {p.picture ? (
             <img
               src={p.picture}
@@ -106,14 +106,14 @@ const ProjectRow = ({ p, index }: { p: Project; index: number }) => {
 
       {/* Content */}
       <div
-        className={`md:col-span-5 ${
+        className={`md:col-span-4 ${
           reverse ? "md:order-1 md:text-right" : "md:order-2"
         }`}
       >
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary mb-3">
           {p.date}
         </p>
-        <h3 className="text-2xl md:text-3xl font-light tracking-tight mb-4">
+        <h3 className="text-2xl md:text-4xl font-light tracking-tight mb-4">
           {p.title}
         </h3>
         <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-5">
@@ -156,10 +156,10 @@ export const Projects = () => {
     <section
       id="work"
       ref={ref}
-      className={`py-28 md:py-40 relative reveal ${inView ? "reveal-in" : ""}`}
+      className={`py-24 md:py-28 relative reveal ${inView ? "reveal-in" : ""}`}
     >
-      <div className="container max-w-6xl">
-        <h2 className="text-center text-3xl md:text-4xl font-light tracking-wide uppercase mb-3">
+      <div className="container max-w-7xl">
+        <h2 className="text-center text-3xl md:text-5xl font-normal tracking-wide uppercase mb-3">
           Projects
         </h2>
         <div className="mx-auto w-16 h-px bg-primary mb-20" />

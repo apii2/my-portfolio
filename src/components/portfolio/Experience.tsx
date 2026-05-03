@@ -45,10 +45,10 @@ export const Experience = () => {
     <section
       id="experience"
       ref={ref}
-      className={`py-28 md:py-40 relative reveal ${inView ? "reveal-in" : ""}`}
+      className={`py-24 md:py-28 relative reveal ${inView ? "reveal-in" : ""}`}
     >
       <div className="container max-w-4xl">
-        <h2 className="text-center text-3xl md:text-4xl font-light tracking-wide uppercase mb-3">
+        <h2 className="text-center text-3xl md:text-5xl font-normal tracking-wide uppercase mb-3">
           Experience
         </h2>
         <div className="mx-auto w-16 h-px bg-primary mb-16" />

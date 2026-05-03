@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { Starfield } from "./Starfield";
 
@@ -99,7 +99,7 @@ export const Hero = () => {
               style={{ animationDelay: "1.2s" }}
             />
             View my work
-            <ArrowRight
+            <ArrowDown
               size={16}
               className="transition-transform group-hover:translate-x-1"
             />

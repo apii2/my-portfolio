@@ -1,10 +1,10 @@
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const socials = [
   { href: "https://github.com/apii2", label: "GitHub", icon: Github },
   { href: "https://www.linkedin.com/in/apeksha-shrestha/", label: "LinkedIn", icon: Linkedin },
   { href: "mailto:apekshrestha22@gmail.com", label: "Email", icon: Mail },
-  { href: "tel:+9779849451044", label: "Phone", icon: Phone },
+  { href: "https://www.frontendmentor.io/profile/apii2", label: "Frontend Mentor", icon: () => <span className="text-sm font-mono">FM</span> },
 ];
 
 export const Footer = () => {
@@ -17,7 +17,7 @@ export const Footer = () => {
         <div className="mx-auto w-16 h-px bg-primary mb-10" />
 
         <p className="text-muted-foreground leading-relaxed mb-10">
-          Have a question or want to work together? Reach out via email, phone,
+          Have a question or want to work together? Reach out via email
           or any of the links below — I'll get back to you as soon as possible.
         </p>
 
