@@ -4,7 +4,7 @@ import { About } from "@/components/portfolio/About";
 import { Projects } from "@/components/portfolio/Projects";
 import { Experience } from "@/components/portfolio/Experience";
 import { Footer } from "@/components/portfolio/Footer";
-import { Starfield } from "@/components/portfolio/Starfield";
+import { ParticlesBackground } from "@/components/portfolio/ParticlesBackground";
 
 const Index = () => {
   return (
@@ -12,10 +12,10 @@ const Index = () => {
       {/* Global animated background — shared across every section */}
       <div
         aria-hidden="true"
-        className="fixed inset-0 z-0 pointer-events-none"
+        className="fixed inset-0 z-0"
       >
-        <Starfield />
-        <div className="absolute inset-0 bg-hero-glow" />
+        <ParticlesBackground />
+        <div className="absolute inset-0 bg-hero-glow pointer-events-none" />
       </div>
 
       <Nav />
