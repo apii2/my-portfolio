@@ -35,16 +35,16 @@ export const About = () => {
     <section
       id="about"
       ref={ref}
-      className={`py-28 md:py-40 relative reveal ${inView ? "reveal-in" : ""}`}
+      className={`py-24 md:py-28 relative reveal ${inView ? "reveal-in" : ""}`}
     >
-      <div className="container max-w-5xl">
-        <h2 className="text-center text-3xl md:text-4xl font-light tracking-wide uppercase mb-3">
+      <div className="container max-w-6xl">
+        <h2 className="text-center text-3xl md:text-5xl font-normal tracking-wide uppercase mb-3">
           About
         </h2>
         <div className="mx-auto w-16 h-px bg-primary mb-16" />
 
-        <div className="grid md:grid-cols-12 gap-10 md:gap-14 items-center">
-          <div className="md:col-span-7 space-y-5 text-foreground/90 leading-relaxed text-base md:text-[17px] font-light">
+        <div className="grid md:grid-cols-[1fr_40%] gap-10 md:gap-24 items-center">
+          <div className="space-y-5 text-foreground leading-relaxed text-base md:text-xl font-light">
             <p>
               I'm{" "}
               <span className="text-foreground">Apeksha Shrestha</span>, a
@@ -63,18 +63,16 @@ export const About = () => {
             <p>
               I focus on clean architecture, maintainable code, and pixel-level
               attention to detail, working across the stack with FastAPI, REST
-              APIs and MySQL when projects call for it. When I'm not at my
-              computer, I enjoy reading, sketching UIs, and exploring new
-              cafés around the valley.
+              APIs and MySQL when projects call for it.
             </p>
           </div>
 
-          <div className="md:col-span-5">
+          <div className="">
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 max-w-md mx-auto">
               {aboutSkills.map(({ icon: Icon, label, color }) => (
                 <div
                   key={label}
-                  className="group relative rounded-md border bg-card/40 px-3 py-4 flex flex-col items-center justify-center gap-2 transition-smooth hover:shadow-glow"
+                  className="group relative rounded-xl border-2 bg-card/40 px-3 py-4 flex flex-col items-center justify-center gap-2 transition-smooth hover:shadow-glow"
                   style={{
                     borderColor: `${color}66`,
                   }}

@@ -33,7 +33,7 @@ export const Nav = () => {
       <nav className="container flex items-center justify-between h-16">
         <a
           href="#top"
-          className="text-sm tracking-[0.2em] uppercase font-light hover:text-primary transition-smooth"
+          className="text-lg tracking-[0.2em] uppercase font-light hover:text-primary transition-smooth"
         >
           Apeksha<span className="text-primary">.</span>
         </a>
@@ -43,7 +43,7 @@ export const Nav = () => {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-xs tracking-[0.18em] uppercase font-light text-muted-foreground hover:text-primary transition-smooth"
+                className="text-sm tracking-[0.18em] uppercase font-light text-muted-foreground hover:text-primary transition-smooth"
               >
                 {l.label}
               </a>

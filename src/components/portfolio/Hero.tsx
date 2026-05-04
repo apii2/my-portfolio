@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { ParticlesBackground } from "./ParticlesBackground";
 
@@ -40,7 +40,7 @@ export const Hero = () => {
               className="pointer-events-none absolute inset-0 border-2 border-primary opacity-0 group-hover:opacity-100 group-hover:animate-echo"
             />
             View my work
-            <ArrowRight
+            <ArrowDown
               size={16}
               className="transition-transform group-hover:translate-x-1"
             />
