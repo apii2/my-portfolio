@@ -24,7 +24,7 @@ export const ParticlesBackground = () => {
       detectRetina: true,
       interactivity: {
         events: {
-          onHover: { enable: true, mode: ["grab", "bubble"] },
+          onHover: { enable: true, mode: ["grab", "bubble", "connect"] },
           resize: { enable: true },
         },
         modes: {
@@ -37,6 +37,11 @@ export const ParticlesBackground = () => {
             size: 2.2,
             duration: 2,
             opacity: 1,
+          },
+          connect: {
+            distance: 120,
+            radius: 200,
+            links: { opacity: 0.4 },
           },
         },
       },
@@ -55,7 +60,7 @@ export const ParticlesBackground = () => {
         },
         move: {
           enable: true,
-          speed: 2,
+          speed: 0.6,
           direction: "none",
           random: false,
           straight: false,
