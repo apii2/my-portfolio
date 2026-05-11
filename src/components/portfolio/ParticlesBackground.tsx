@@ -24,13 +24,24 @@ export const ParticlesBackground = () => {
       detectRetina: true,
       interactivity: {
         events: {
-          onHover: { enable: true, mode: "grab" },
+          onHover: { enable: true, mode: ["grab", "bubble", "connect"] },
           resize: { enable: true },
         },
         modes: {
           grab: {
             distance: 360,
             links: { opacity: 1, color: "#fa6b63" },
+          },
+          bubble: {
+            distance: 220,
+            size: 4,
+            duration: 2,
+            opacity: 1,
+          },
+          connect: {
+            distance: 180,
+            radius: 220,
+            links: { opacity: 0.5 },
           },
         },
       },
