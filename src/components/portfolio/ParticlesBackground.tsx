@@ -29,17 +29,17 @@ export const ParticlesBackground = () => {
         },
         modes: {
           grab: {
-            distance: 220,
+            distance: 360,
             links: { opacity: 1, color: "#fa6b63" },
           },
         },
       },
       particles: {
-        number: { value: 90, density: { enable: true, width: 1200, height: 800 } },
-        color: { value: "#ffffff" },
+        number: { value: 110, density: { enable: true, width: 1200, height: 800 } },
+        color: { value: ["#fa6b63", "#f5b042", "#63d2fa", "#a063fa", "#63fa9c"] },
         shape: { type: "circle" },
-        opacity: { value: 0.5 },
-        size: { value: 1.6 },
+        opacity: { value: 0.8 },
+        size: { value: 0.9 },
         links: {
           enable: true,
           distance: 140,
