@@ -29,22 +29,22 @@ export const ParticlesBackground = () => {
         },
         modes: {
           grab: {
-            distance: 320,
+            distance: 220,
             links: { opacity: 1, color: "hsl(var(--primary))" },
           },
         },
       },
       particles: {
-        number: { value: 80, density: { enable: true, width: 1200, height: 800 } },
+        number: { value: 90, density: { enable: true, width: 1200, height: 800 } },
         color: { value: "#ffffff" },
         shape: { type: "circle" },
-        opacity: { value: 0.4 },
-        size: { value: 1.2 },
+        opacity: { value: 0.5 },
+        size: { value: 1.6 },
         links: {
           enable: true,
-          distance: 160,
+          distance: 140,
           color: "#ffffff",
-          opacity: 0.25,
+          opacity: 0,
           width: 1.2,
         },
         move: {
