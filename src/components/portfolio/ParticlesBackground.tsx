@@ -30,7 +30,7 @@ export const ParticlesBackground = () => {
         modes: {
           grab: {
             distance: 220,
-            links: { opacity: 1, color: "hsl(var(--primary))" },
+            links: { opacity: 1, color: "#fa6b63" },
           },
         },
       },
@@ -44,7 +44,7 @@ export const ParticlesBackground = () => {
           enable: true,
           distance: 140,
           color: "#ffffff",
-          opacity: 0,
+          opacity: 0.001,
           width: 1.2,
         },
         move: {
