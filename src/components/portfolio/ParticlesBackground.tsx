@@ -24,7 +24,7 @@ export const ParticlesBackground = () => {
       detectRetina: true,
       interactivity: {
         events: {
-          onHover: { enable: true, mode: ["grab", "bubble", "connect"] },
+          onHover: { enable: true, mode: ["bubble", "connect"] },
           resize: { enable: true },
         },
         modes: {
