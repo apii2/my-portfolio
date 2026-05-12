@@ -46,7 +46,7 @@ export const ParticlesBackground = () => {
         },
       },
       particles: {
-        number: { value: 110, density: { enable: true, width: 1200, height: 800 } },
+        number: { value: 75, density: { enable: true, width: 1200, height: 800 } },
         color: { value: ["#fa6b63", "#f5b042", "#63d2fa", "#a063fa", "#63fa9c"] },
         shape: { type: "circle" },
         opacity: { value: 0.8 },
