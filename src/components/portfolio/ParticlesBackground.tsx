@@ -39,8 +39,8 @@ export const ParticlesBackground = () => {
             opacity: 1,
           },
           connect: {
-            distance: 160,
-            radius: 300,
+            distance: 200,
+            radius: 180,
             links: { opacity: 0.4 },
           },
         },
