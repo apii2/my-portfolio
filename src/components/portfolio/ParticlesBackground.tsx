@@ -39,14 +39,14 @@ export const ParticlesBackground = () => {
             opacity: 1,
           },
           connect: {
-            distance: 200,
-            radius: 180,
+            distance: 110,
+            radius: 280,
             links: { opacity: 0.4 },
           },
         },
       },
       particles: {
-        number: { value: 75, density: { enable: true, width: 1200, height: 800 } },
+        number: { value: 55, density: { enable: true, width: 1200, height: 800 } },
         color: { value: ["#fa6b63", "#f5b042", "#63d2fa", "#a063fa", "#63fa9c"] },
         shape: { type: "circle" },
         opacity: { value: 0.8 },
