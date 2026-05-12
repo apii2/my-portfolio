@@ -28,10 +28,6 @@ export const ParticlesBackground = () => {
           resize: { enable: true },
         },
         modes: {
-          grab: {
-            distance: 420,
-            links: { opacity: 1, color: "#fa6b63" },
-          },
           bubble: {
             distance: 240,
             size: 2.2,
