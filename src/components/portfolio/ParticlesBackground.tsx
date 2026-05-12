@@ -29,7 +29,7 @@ export const ParticlesBackground = () => {
         },
         modes: {
           grab: {
-            distance: 420,
+            distance: 180,
             links: { opacity: 1, color: "#fa6b63" },
           },
           bubble: {
